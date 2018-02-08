@@ -1,0 +1,20 @@
+<View key={i} style={{height: 80, backgroundColor: '#fff', marginLeft:5, marginRight:5, marginTop:10}}>
+                                        <View style={{flex:1, flexDirection:'row', height:20}}>
+                                            <View style={{flex:1}}>
+                                            <Text> {x.cat_name} </Text>
+                                            </View>
+                                            <View style={{flex:1, right:0}}>
+                                            <Text style={{textAlign: 'right'}}> {x.cat_type} </Text>
+                                            </View>
+                                        </View>
+                                        <View style={{height:40}}>
+                                            <Text>{x.project_name}</Text>
+                                        </View>
+                                        <View style={{flex:1, flexDirection:'row', height:20}}>
+                                            <View style={{flex:1}}>
+                                            </View>
+                                            <View style={{flex:1, right:0}}>
+                                                <Text style={{textAlign: 'right'}}> {x.cat_reate_date} </Text>
+                                            </View>
+                                        </View>
+                                    </View>
