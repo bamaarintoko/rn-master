@@ -58,10 +58,6 @@ class screen_home extends Component {
         //console.log("--->", this.props.redAuth)
         return (
             <Container>
-                <StatusBar
-                    backgroundColor="#212121"
-                    barStyle="light-content"
-                />
                 <Head
                     leftPress={() => this.props.navigation.navigate('DrawerOpen')}
                     rightPress={() => this.props.navigation.navigate('Setting')}
