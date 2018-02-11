@@ -17,6 +17,7 @@ import {
     Button, Container, Content, Footer, FooterTab, Form, Header, Input, Item, Left, Right, SwipeRow,
     Text
 } from "native-base";
+import Head from '../../Components/Head'
 // import Statusbar from "../../Components/Statusbar";
 import Icon from 'react-native-vector-icons/FontAwesome';
 // import PTRView from 'react-native-pull-to-refresh';
@@ -48,7 +49,7 @@ class screen_home extends Component {
 
     }
     componentDidUpdate(prevProps, prevState) {
-       
+
 
 
     }
@@ -61,27 +62,12 @@ class screen_home extends Component {
                     backgroundColor="#212121"
                     barStyle="light-content"
                 />
-                <Header androidStatusBarColor="#2c3e50" style={{ backgroundColor: '#FFFFFF', borderBottomWidth: 1, borderBottomColor: '#BEBEBE' }}>
-                    <Left style={{ flex: 1 }}>
-                        <Button full transparent onPress={() => this.props.navigation.navigate('DrawerOpen')}>
-                            <Icon size={20} name="bars" color="#29363d" />
-                        </Button>
-                    </Left>
-                    <Body style={{ flex: 6, justifyContent: 'center', alignItems: 'center' }}>
-                        {/* <Image
-                            source={require('../../utils/assetss/persada_food.png')}
-                        /> */}
-                    </Body>
-                    <Right style={{ flex: 1 }}>
-                        <Button full transparent onPress={() => this.props.navigation.navigate('Setting')}>
-                            <Icon size={20} name="cog" color="#29363d" />
-                        </Button>
-                    </Right>
-                </Header>
-                    <Content>
-                        
-                    </Content>
-
+                <Head
+                    leftPress={() => this.props.navigation.navigate('DrawerOpen')}
+                    rightPress={() => this.props.navigation.navigate('Setting')}
+                />
+                <Content>
+                </Content>
             </Container>
         );
     }
