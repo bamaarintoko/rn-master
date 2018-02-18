@@ -1,18 +1,12 @@
 import { NavigationActions } from 'react-navigation';
-
 import { AppNavigator } from '../navigator/AppNavigator';
-
 const firstAction = AppNavigator.router.getActionForPathAndParams('Splash');
-
 const initialNavState = AppNavigator.router.getStateForAction(
     firstAction,
-
 );
 
 export function nav(state = initialNavState, action) {
     let nextState;
-
-    //console.log("data_reduc",action);
     switch (action.type) {
         case 'HOME':
             nextState = AppNavigator.router.getStateForAction(
@@ -25,7 +19,6 @@ export function nav(state = initialNavState, action) {
             );
             break;
         case 'Login':
-
             nextState = AppNavigator.router.getStateForAction(
                 NavigationActions.reset({
                     index:0,
@@ -46,42 +39,23 @@ export function nav(state = initialNavState, action) {
             );
             break;
         case 'EDIT_WAREHOUSE':
-
             nextState = AppNavigator.router.getStateForAction(
                 NavigationActions.navigate({ routeName: 'EditWarehouse' }),
                 state
             );
             break;
         case 'NAV_DETAIL_PROD':
-
             nextState = AppNavigator.router.getStateForAction(
                 NavigationActions.navigate({ routeName: 'screenOne' }),
                 state
             );
             break;
         case 'NAV_FILTER_RESPONSES':
-
             nextState = AppNavigator.router.getStateForAction(
                 NavigationActions.navigate({ routeName: 'screenFilterResponses' }),
                 state
             );
             break;
-        case 'three':
-
-            nextState = AppNavigator.router.getStateForAction(
-                NavigationActions.navigate({ routeName: 'screenThree' }),
-                state
-            );
-            break;
-        case 'four':
-
-            nextState = AppNavigator.router.getStateForAction(
-                NavigationActions.navigate({ routeName: 'screenFour' }),
-                state
-            );
-            break;
-
-
         default:
             nextState = AppNavigator.router.getStateForAction(action, state);
             break;

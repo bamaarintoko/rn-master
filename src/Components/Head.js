@@ -1,8 +1,7 @@
 import React from 'react';
 import {
     Body,
-    Button, Container, Content, Footer, FooterTab, Form, Header, Input, Item, Left, Right, SwipeRow,
-    Text
+    Button, Container, Content, Footer, FooterTab, Form, Header, Input, Item, Left, Right, SwipeRow
 } from "native-base";
 import Icon from 'react-native-vector-icons/FontAwesome';
 const Head = ({ leftPress, bodyPress, rightPress }) => {
@@ -14,9 +13,6 @@ const Head = ({ leftPress, bodyPress, rightPress }) => {
                 </Button>
             </Left>
             <Body style={{ flex: 6, justifyContent: 'center', alignItems: 'center' }}>
-                {/* <Image
-                            source={require('../../utils/assetss/persada_food.png')}
-                        /> */}
             </Body>
             <Right style={{ flex: 1 }}>
                 <Button full transparent onPress={rightPress}>
