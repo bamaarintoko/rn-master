@@ -68,14 +68,6 @@ class Drawer extends Component {
 
     }
 
-    componentDidMount() {
-
-    }
-    componentDidUpdate(prevProps, prevState) {
-
-
-    }
-
     render() {
         return (
             <View style={styles.container}>
