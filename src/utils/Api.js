@@ -12,16 +12,6 @@ export default class Api {
         const config = {
             headers: {'Authorization': 'Bearer birds flyy south'}
         };
-        //let token = {token:'qweweqwe'}
-        //console.log((token));
-        //console.log((config));
-
-        // const a = {
-        //     ...params,
-        //     ...token
-        // }
-        //console.log(a);
-        // return axios.post(url,qs.stringify(params))
         return axios.post(url,qs.stringify(params),config)
     }
 
